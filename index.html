@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced To Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>📝 To-Do List</h1>
+    <div class="top-bar">
+  <input type="text" id="input-field" placeholder="Add a new task..." />
+  <input type="date" id="due-date" />
+  <input type="text" id="tag-field" placeholder="Tag (e.g., school)" />
+  <button onclick="addItem()">Add</button>
+</div>
+    <div class="filter-bar">
+      <label for="filter">Filter by tag:</label>
+      <select id="filter" onchange="filterItems()">
+        <option value="">All</option>
+        <option value="school">School</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+      </select>
+      <button onclick="clearFilter()">Clear Filter</button>
+    </div>
+
+    <ul id="ul-list"></ul>
+
+    <div class="buttons">
+      <button onclick="resetAll()">Reset All</button>
+      <button onclick="toggleDarkMode()" id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+  </main>
+
+  <script src="todo.js"></script>
+</body>
+</html>
